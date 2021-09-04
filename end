@@ -1,0 +1,35 @@
+[33mcommit 97a29fc6df8f6e5506bc2e7dca57f15bad9ad308[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Diego Quinones <diegoqr2000@gmail.com>
+Date:   Sat Sep 4 11:03:57 2021 -0400
+
+    F6-F7-F8- Calculos con impuestos segun el estado
+
+[33mcommit a0a67adc4c5705ab42dc72ac61ec474e160a936b[m
+Author: Diego Quinones <diegoqr2000@gmail.com>
+Date:   Sat Sep 4 10:34:29 2021 -0400
+
+    F5- Calcular y mostrar precio con impuesto predeterminado
+
+[33mcommit 784b71cb8d0f2d50e9e750453d39a2ece0b3c7b4[m
+Author: Diego Quinones <diegoqr2000@gmail.com>
+Date:   Sat Sep 4 10:18:43 2021 -0400
+
+    F4- Ingresar nombre de item y mostrar
+
+[33mcommit 15ce2537aedc935070f5ab89b168cd540c798715[m
+Author: Diego Quinones <diegoqr2000@gmail.com>
+Date:   Sat Sep 4 10:12:44 2021 -0400
+
+    F3- Modificar cantidad y multiplicacion por precio
+
+[33mcommit bb0abb2c05e8957985058525ccf1efbe8be73709[m
+Author: Diego Quinones <diegoqr2000@gmail.com>
+Date:   Sat Sep 4 10:03:10 2021 -0400
+
+    F2- Aniadir cantidad por defecto
+
+[33mcommit e5881d7a6ee468a741a9aea8422fc204903bb438[m
+Author: Diego Quinones <diegoqr2000@gmail.com>
+Date:   Sat Sep 4 09:52:21 2021 -0400
+
+    F1- Ingresar y mostrar un numero

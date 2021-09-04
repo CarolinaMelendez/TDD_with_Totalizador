@@ -17,8 +17,23 @@ function calculate_taxes(total_price, percentage_taxes){
 }
 
 /*
-function calcualte_discount(total_price, percentage_discount){
-    return 
+function calculate_discount(total_price ){
+    discount_percentage = 0
+    if(quantity.v >= 1000  &&  quantity < 3000 ){
+        discount_percentage = 0.03
+    }else if(quantity >= 3000  &&  quantity < 7000 ){
+        discount_percentage = 0.05
+    }else if(quantity >= 7000  &&  quantity < 10000 ){
+        discount_percentage = 0.07
+    }
+    else if(quantity >= 10000  &&  quantity < 30000 ){
+        discount_percentage = 0.1
+    }else{
+        // mayor que 30000
+        discount_percentage = 0.15
+    }
+
+    return total_price * discount_percentage
 }
 */
 

@@ -36,7 +36,14 @@
         </div><br>
 
         <div>
-          <table border="1" align="left">
+          <p id="total-price-output"></p>
+          <p id="tax-output"></p>
+          <p id="price-With-tax-output"></p>
+        </div>
+        
+
+        <div>
+          <table  border="1" align="left">
             <tr>
               <th>STATE</th>
               <th>TAX</th>
@@ -62,14 +69,48 @@
               <td>8.25%</td>
             </tr>
           </table>
+          
+        
+
+          <table  id="tabla1" border="1" align="left">
+              <tr>
+                <th>Descuentos</th>
+              </tr>
+              <tr>
+                <td id="nested">
+                  <table id="tabla2">
+                    <tr>
+                      <td>Total de la orden</td>
+                      <td>Tasa descuento</td>
+                    </tr>
+                    <tr>
+                      <td>1000</td>
+                      <td>3%</td>
+                    </tr>
+                    <tr>
+                      <td>3000</td>
+                      <td>5%</td>
+                    </tr>
+                    <tr>
+                      <td>7000</td>
+                      <td>7%</td>
+                    </tr>
+                    <tr>
+                      <td>1000</td>
+                      <td>10%</td>
+                    </tr>
+                    <tr>
+                      <td>3000</td>
+                      <td>15%</td>
+                    </tr>
+                  </table>
+              </tr>
+              
+            </table>
         </div><br> 
 
 
-        <div>
-          <p id="total-price-output"></p>
-          <p id="tax-output"></p>
-          <p id="price-With-tax-output"></p>
-        </div>
+        
 
       </form>
     </div><br>
