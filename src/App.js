@@ -1,11 +1,14 @@
 const quantity = document.querySelector("#quantity-input");
 const price = document.querySelector("#price-input");
-
+const p = document.querySelector("#total-price-output");
 const form = document.querySelector("#ventas-form")
 
 form.addEventListener("submit",event=>{
-    alert("Price: " + quantity.value);
-})
+    event.preventDefault();
+    totalPrice = quantity.value * price.value;
+    alert("Total Price: " + totalPrice );
+    p.innerHTML = "Total price = " + totalPrice;
+});
 
 /*
 function isAnIndex(index,lenght){
