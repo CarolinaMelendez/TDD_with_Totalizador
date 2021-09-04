@@ -1,6 +1,7 @@
 const name_item = document.querySelector("#item-name-input");
 const quantity = document.querySelector("#quantity-input");
 const price = document.querySelector("#price-input");
+const percentage_tax = document.querySelector("#tax-input");
 
 // Text for page
 const total_price = document.querySelector("#total-price-output");
@@ -24,9 +25,10 @@ function calcualte_discount(total_price, percentage_discount){
 form.addEventListener("submit",event=>{
     event.preventDefault();
     totalPrice = quantity.value * price.value;
-    tax_value = calculate_taxes(totalPrice, 6.65);
+    tax_value = calculate_taxes(totalPrice, percentage_tax.value);
     total_with_tax = totalPrice + tax_value;
-    alert("Item name "+ name_item.value);
+
+    // show in page
     total_price.innerHTML = "Total price = " + totalPrice;
     tax.innerHTML = "Tax = " + tax_value ;
     price_with_tax.innerHTML = "Total with TAX = " + total_with_tax ;

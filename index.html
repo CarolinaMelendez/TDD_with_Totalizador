@@ -1,36 +1,79 @@
 <html>
-  <body>
+  <head>
     <h1 id="title" style = "font-family:'Courier New', Courier, monospace">Sales totalizer</h1>
-    <form id="ventas-form">
-      <div>
-        <label for="item-name-input">Item Name:</label>
-        <input type="text" id="item-name-input">
-      </div><br>
+  </head>
+  <body>
+    <div>
+      <form id="ventas-form">
+        <div>
+          <label for="item-name-input">Item Name:</label>
+          <input type="text" id="item-name-input">
+        </div><br>
 
-      <div>
-        <label for="quantity-input">Quantity:</label>
-        <input type="number" id="quantity-input" value="1">
-      </div><br>
+        <div>
+          <label for="quantity-input">Quantity:</label>
+          <input type="number" id="quantity-input" value="1">
+        </div><br>
 
-      <div>
-        <label for="price-input">Price:</label>
-        <input type="number" id="price-input">
-      </div><br>
+        <div>
+          <label for="price-input">Price:</label>
+          <input type="number" id="price-input">
+        </div><br>
 
-      <div>
-        <label >El impuesto predeterminado es de UT (6.65%) </label>
-      </div><br>
+        <div>
+          <label for="tax-input">Choose a state:</label>
+            <select name="tax-input" id="tax-input">
+              <option value=6.65>UT</option>
+              <option value=8.00>NV</option>
+              <option value=6.25>TX</option>
+              <option value=4.00>AL</option>
+              <option value=8.25>CA</option>
+            </select>
+        </div><br>
 
-      <div>
-        <input type="submit" value="Confirm" />
-      </div>
-      <div>
-        <p id="total-price-output"></p>
-        <p id="tax-output"></p>
-        <p id="price-With-tax-output"></p>
-      </div>
+        <div>
+          <input type="submit" value="Confirm" />
+        </div><br>
 
-    </form>
+        <div>
+          <table border="1" align="left">
+            <tr>
+              <th>STATE</th>
+              <th>TAX</th>
+            </tr>
+            <tr>
+              <td>UTE</td>
+              <td>6.65%</td>
+            </tr>
+            <tr>
+              <td>NV</td>
+              <td>8.00%</td>
+            </tr>
+            <tr>
+              <td>TX</td>
+              <td>6.65%</td>
+            </tr>
+            <tr>
+              <td>AL</td>
+              <td>4.00%</td>
+            </tr>
+            <tr>
+              <td>CA</td>
+              <td>8.25%</td>
+            </tr>
+          </table>
+        </div><br> 
+
+
+        <div>
+          <p id="total-price-output"></p>
+          <p id="tax-output"></p>
+          <p id="price-With-tax-output"></p>
+        </div>
+
+      </form>
+    </div><br>
+
     <script src="./src/index.js"></script>
   </body>
 </html>
