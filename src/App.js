@@ -1,3 +1,4 @@
+const name_item = document.querySelector("#item-name-input");
 const quantity = document.querySelector("#quantity-input");
 const price = document.querySelector("#price-input");
 const p = document.querySelector("#total-price-output");
@@ -6,7 +7,7 @@ const form = document.querySelector("#ventas-form")
 form.addEventListener("submit",event=>{
     event.preventDefault();
     totalPrice = quantity.value * price.value;
-    alert("Total Price: " + totalPrice );
+    alert("Item name "+ name_item.value);
     p.innerHTML = "Total price = " + totalPrice;
 });
 
