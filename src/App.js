@@ -1,9 +1,10 @@
 const quantity = document.querySelector("#quantity-input");
+const price = document.querySelector("#price-input");
 
 const form = document.querySelector("#ventas-form")
 
 form.addEventListener("submit",event=>{
-    alert("cantidad: " + quantity.value);
+    alert("Price: " + quantity.value);
 })
 
 /*
