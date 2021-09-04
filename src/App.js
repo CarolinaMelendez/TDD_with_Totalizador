@@ -6,9 +6,9 @@ const percentage_tax = document.querySelector("#tax-input");
 // Text for page
 const total_price = document.querySelector("#total-price-output");
 const tax= document.querySelector("#tax-output");
-const price_with_tax = document.querySelector("#price-With-tax-output");
 
-//const taxes_price = document.querySelector("")
+const discount= document.querySelector("#discount-output");
+const total_price_calculated = document.querySelector("#final-price-output");
 
 const form = document.querySelector("#ventas-form")
 
@@ -16,37 +16,42 @@ function calculate_taxes(total_price, percentage_taxes){
     return total_price * (percentage_taxes / 100);
 }
 
-/*
-function calculate_discount(total_price ){
+
+function calculate_discount(total_price, quantity){
     discount_percentage = 0
-    if(quantity.v >= 1000  &&  quantity < 3000 ){
+    if(quantity >= 1000  &&  quantity < 3000 ){
         discount_percentage = 0.03
     }else if(quantity >= 3000  &&  quantity < 7000 ){
         discount_percentage = 0.05
     }else if(quantity >= 7000  &&  quantity < 10000 ){
         discount_percentage = 0.07
-    }
-    else if(quantity >= 10000  &&  quantity < 30000 ){
+    }else if(quantity >= 10000  &&  quantity < 30000 ){
         discount_percentage = 0.1
-    }else{
-        // mayor que 30000
+    }else if(quantity > 30000){
         discount_percentage = 0.15
     }
 
+
     return total_price * discount_percentage
 }
-*/
+
 
 form.addEventListener("submit",event=>{
     event.preventDefault();
     totalPrice = quantity.value * price.value;
     tax_value = calculate_taxes(totalPrice, percentage_tax.value);
     total_with_tax = totalPrice + tax_value;
+    discount_value = calculate_discount(totalPrice, quantity.value);
+    total_with_discount = total_with_tax - discount_value;
 
     // show in page
     total_price.innerHTML = "Total price = " + totalPrice;
-    tax.innerHTML = "Tax = " + tax_value ;
-    price_with_tax.innerHTML = "Total with TAX = " + total_with_tax ;
+    tax.innerHTML = "Tax = +" + tax_value ;
+    discount.innerHTML = "Discount = -" + discount_value;
+    total_price_calculated.innerHTML = "Total to pay = " + total_with_discount;
+    if (discount_value != 0 ){
+        alert( "Felicidades - Recibiste un descuentoo ¡¡ :D");
+    }
 });
 
 /*
