@@ -1,14 +1,35 @@
 const name_item = document.querySelector("#item-name-input");
 const quantity = document.querySelector("#quantity-input");
 const price = document.querySelector("#price-input");
-const p = document.querySelector("#total-price-output");
+
+// Text for page
+const total_price = document.querySelector("#total-price-output");
+const tax= document.querySelector("#tax-output");
+const price_with_tax = document.querySelector("#price-With-tax-output");
+
+//const taxes_price = document.querySelector("")
+
 const form = document.querySelector("#ventas-form")
+
+function calculate_taxes(total_price, percentage_taxes){
+    return total_price * (percentage_taxes / 100);
+}
+
+/*
+function calcualte_discount(total_price, percentage_discount){
+    return 
+}
+*/
 
 form.addEventListener("submit",event=>{
     event.preventDefault();
     totalPrice = quantity.value * price.value;
+    tax_value = calculate_taxes(totalPrice, 6.65);
+    total_with_tax = totalPrice + tax_value;
     alert("Item name "+ name_item.value);
-    p.innerHTML = "Total price = " + totalPrice;
+    total_price.innerHTML = "Total price = " + totalPrice;
+    tax.innerHTML = "Tax = " + tax_value ;
+    price_with_tax.innerHTML = "Total with TAX = " + total_with_tax ;
 });
 
 /*
