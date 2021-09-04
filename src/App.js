@@ -35,8 +35,24 @@ function calculate_discount(total_price, quantity){
     return total_price * discount_percentage
 }
 
+function control_bad_inputs(){
+    if(!isNaN(name_item.value)){
+        document.write(" UUUUuuppss ¡¡¡  <br/>");
+        document.write(name_item.value + " no es un nombre de item valido :P  <br/>");
+        document.write(" Por favor, vuelva a hacer cargar la pagina e intentelo de nuevo<br/><br/>");
+    }
+    if (quantity.value <= 0){
+        document.write("El valor de la cantidad no es valido!!! <br/><br/>");
+    }
+    if (price.value <= 0){
+        document.write("El valor del precio no es valido!!! <br/><br/>");
+    }
+}
+
 
 form.addEventListener("submit",event=>{
+
+    control_bad_inputs();
     event.preventDefault();
     totalPrice = quantity.value * price.value;
     tax_value = calculate_taxes(totalPrice, percentage_tax.value);
@@ -45,10 +61,10 @@ form.addEventListener("submit",event=>{
     total_with_discount = total_with_tax - discount_value;
 
     // show in page
-    total_price.innerHTML = "Total price = " + totalPrice;
-    tax.innerHTML = "Tax = +" + tax_value ;
-    discount.innerHTML = "Discount = -" + discount_value;
-    total_price_calculated.innerHTML = "Total to pay = " + total_with_discount;
+    total_price.innerHTML = "Total price = " + totalPrice + "$";
+    tax.innerHTML = "Tax = +" + tax_value + "$";
+    discount.innerHTML = "Discount = -" + discount_value + "$";
+    total_price_calculated.innerHTML = "Total to pay = " + total_with_discount + "$";
     if (discount_value != 0 ){
         alert( "Felicidades - Recibiste un descuentoo ¡¡ :D");
     }
