@@ -1,121 +1,120 @@
 <html>
-  <head>
-    <h1 id="title" style = "font-family:'Courier New', Courier, monospace">Sales totalizer</h1>
-  </head>
-  <body>
-    <div>
-      <form id="ventas-form">
-        <div>
-          <label for="item-name-input">Item Name:</label>
-          <input type="text" id="item-name-input">
-        </div><br>
-
-        <div>
-          <label for="quantity-input">Quantity:</label>
-          <input type="number" id="quantity-input" value="1">
-        </div><br>
-
-        <div>
-          <label for="price-input">Price:</label>
-          <input type="number" id="price-input">
-        </div><br>
-
-        <div>
-          <label for="tax-input">Choose a state:</label>
-            <select name="tax-input" id="tax-input">
-              <option value=6.65>UT</option>
-              <option value=8.00>NV</option>
-              <option value=6.25>TX</option>
-              <option value=4.00>AL</option>
-              <option value=8.25>CA</option>
-            </select>
-        </div><br>
-
-        <div>
-          <input type="submit" value="Confirm" />
-        </div><br>
-
-        <div>
-          <p id="total-price-output"></p>
-          <p id="tax-output"></p>
-          <p id="discount-output"></p>
-          <p id="final-price-output"></p>
-        </div>
-
-
-        <div>
-          <table  border="1" align="left">
-            <tr>
-              <th>STATE</th>
-              <th>TAX</th>
-            </tr>
-            <tr>
-              <td>UTE</td>
-              <td>6.65%</td>
-            </tr>
-            <tr>
-              <td>NV</td>
-              <td>8.00%</td>
-            </tr>
-            <tr>
-              <td>TX</td>
-              <td>6.65%</td>
-            </tr>
-            <tr>
-              <td>AL</td>
-              <td>4.00%</td>
-            </tr>
-            <tr>
-              <td>CA</td>
-              <td>8.25%</td>
-            </tr>
-          </table>
-          
-        
-
-          <table  id="tabla1" border="1" align="left">
+  <div style="background-image: url('https://bit.ly/3BJVKec'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-size: 100% 100%;">
+    <head>
+      <h1 id="title" style = "font-family:'Courier New', Courier, monospace">Sales totalizer</h1>
+    </head>
+    <body>
+      <div>
+        <form id="ventas-form">
+          <div>
+            <label for="item-name-input">Item Name:</label>
+            <input type="text" id="item-name-input">
+          </div><br>
+  
+          <div>
+            <label for="quantity-input">Quantity:</label>
+            <input type="number" id="quantity-input" value="1">
+          </div><br>
+  
+          <div>
+            <label for="price-input">Price:</label>
+            <input type="number" id="price-input">
+          </div><br>
+  
+          <div>
+            <label for="tax-input">Choose a state:</label>
+              <select name="tax-input" id="tax-input">
+                <option value=6.65>UT</option>
+                <option value=8.00>NV</option>
+                <option value=6.25>TX</option>
+                <option value=4.00>AL</option>
+                <option value=8.25>CA</option>
+              </select>
+          </div><br>
+  
+          <div>
+            <input type="submit" value="Confirm" />
+          </div><br>
+  
+          <div>
+            <p id="total-price-output"></p>
+            <p id="tax-output"></p>
+            <p id="discount-output"></p>
+            <p id="final-price-output"></p>
+          </div>
+  
+  
+          <div>
+            <table  border="1" align="left">
               <tr>
-                <th>Descuentos</th>
+                <th>STATE</th>
+                <th>TAX</th>
               </tr>
               <tr>
-                <td id="nested">
-                  <table id="tabla2">
-                    <tr>
-                      <td>Total de la orden</td>
-                      <td>Tasa descuento</td>
-                    </tr>
-                    <tr>
-                      <td>1000</td>
-                      <td>3%</td>
-                    </tr>
-                    <tr>
-                      <td>3000</td>
-                      <td>5%</td>
-                    </tr>
-                    <tr>
-                      <td>7000</td>
-                      <td>7%</td>
-                    </tr>
-                    <tr>
-                      <td>10000</td>
-                      <td>10%</td>
-                    </tr>
-                    <tr>
-                      <td>30000</td>
-                      <td>15%</td>
-                    </tr>
-                  </table>
+                <td>UTE</td>
+                <td>6.65%</td>
               </tr>
-              
+              <tr>
+                <td>NV</td>
+                <td>8.00%</td>
+              </tr>
+              <tr>
+                <td>TX</td>
+                <td>6.65%</td>
+              </tr>
+              <tr>
+                <td>AL</td>
+                <td>4.00%</td>
+              </tr>
+              <tr>
+                <td>CA</td>
+                <td>8.25%</td>
+              </tr>
             </table>
-        </div><br> 
-
-
-        
-
-      </form>
-    </div><br>
-
-    <script src="./src/index.js"></script>
-  </body>
+            
+          
+  
+            <table  id="tabla1" border="1" align="left">
+                <tr>
+                  <th>Descuentos</th>
+                </tr>
+                <tr>
+                  <td id="nested">
+                    <table id="tabla2">
+                      <tr>
+                        <td>Total de la orden</td>
+                        <td>Tasa descuento</td>
+                      </tr>
+                      <tr>
+                        <td>1000</td>
+                        <td>3%</td>
+                      </tr>
+                      <tr>
+                        <td>3000</td>
+                        <td>5%</td>
+                      </tr>
+                      <tr>
+                        <td>7000</td>
+                        <td>7%</td>
+                      </tr>
+                      <tr>
+                        <td>10000</td>
+                        <td>10%</td>
+                      </tr>
+                      <tr>
+                        <td>30000</td>
+                        <td>15%</td>
+                      </tr>
+                    </table>
+                </tr>
+                
+              </table>
+          </div><br> 
+          
+        </form>
+      </div><br>
+  
+      <script src="./src/index.js"></script>
+    </body>
+  </div> 
 </html>

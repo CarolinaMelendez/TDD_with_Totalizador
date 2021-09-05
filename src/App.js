@@ -16,7 +16,7 @@ function calculate_taxes(total_price, percentage_taxes){
     return total_price * (percentage_taxes / 100);
 }
 
-
+// https://bit.ly/3zLJARJ
 function calculate_discount(total_price, quantity){
     discount_percentage = 0
     if(quantity >= 1000  &&  quantity < 3000 ){
@@ -36,16 +36,23 @@ function calculate_discount(total_price, quantity){
 }
 
 function control_bad_inputs(){
+    badInput = false;
     if(!isNaN(name_item.value)){
-        document.write(" UUUUuuppss ¡¡¡  <br/>");
+        document.write("<p> UUUUuuppss ¡¡¡  <br/>");
         document.write(name_item.value + " no es un nombre de item valido :P  <br/>");
-        document.write(" Por favor, vuelva a hacer cargar la pagina e intentelo de nuevo<br/><br/>");
+        document.write(" Por favor, vuelva a hacer cargar la pagina e intentelo de nuevo <br/><br/> </p>");
+        badInput = true;
     }
     if (quantity.value <= 0){
-        document.write("El valor de la cantidad no es valido!!! <br/><br/>");
+        document.write("<p> El valor de la cantidad no es valido!!! <br/><br/> </p>");
+        badInput = true;
     }
     if (price.value <= 0){
-        document.write("El valor del precio no es valido!!! <br/><br/>");
+        document.write("<p> El valor del precio no es valido!!! <br/><br/> </p>");
+        badInput = true;
+    }
+    if (badInput){
+        document.write("<img src=\"https://bit.ly/3zLJARJ\"");
     }
 }
 
