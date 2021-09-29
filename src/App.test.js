@@ -14,7 +14,10 @@ describe("calcular total", () => {
     expect(calcularTotal(20,10,10)).toEqual(220);
   });
   it("Prueba 4 - total price with discount (1 condition)", () => {
-    expect(calcularTotal(20,100,10)).toEqual(2000);
+    expect(calcularTotal(20,1000,10)).toEqual(21400);
+  });
+  it("Prueba 4 - total price with discount (2 condition)", () => {
+    expect(calcularTotal(20,3000,10)).toEqual(63000);
   });
 });
 
@@ -22,6 +25,7 @@ function calcularTotal(price,quantity,tax){
     sum_total_price = price*quantity;
     calculated_tax = sum_total_price * (tax/100);
     total_witn_tax = sum_total_price + calculated_tax;
-    if (quantity >= 100 ) return total_witn_tax - (sum_total_price*0.10)
+    if (quantity >= 3000 ) return total_witn_tax - (sum_total_price*0.05)
+    if (quantity >= 1000 ) return total_witn_tax - (sum_total_price*0.03)
     return total_witn_tax;
 }
