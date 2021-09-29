@@ -1,3 +1,5 @@
+
+
 const name_item = document.querySelector("#item-name-input");
 const quantity = document.querySelector("#quantity-input");
 const price = document.querySelector("#price-input");
@@ -9,6 +11,7 @@ const tax= document.querySelector("#tax-output");
 
 const discount= document.querySelector("#discount-output");
 const total_price_calculated = document.querySelector("#final-price-output");
+const total_price_calculated_2 = document.querySelector("#final-price-2-output");
 
 const form = document.querySelector("#ventas-form")
 
@@ -35,6 +38,7 @@ function calculate_discount(total_price, quantity){
     return total_price * discount_percentage
 }
 
+
 function control_bad_inputs(){
     badInput = false;
     if(!isNaN(name_item.value)){
@@ -56,6 +60,15 @@ function control_bad_inputs(){
     }
 }
 
+function calcularTotal(quantity,price,percentage_tax){
+    total = 0;
+    totalPrice = quantity * price;
+    tax_value = calculate_taxes(totalPrice, percentage_tax);
+    total_with_tax = totalPrice + tax_value;
+    discount_value = calculate_discount(totalPrice, quantity);
+    total = total_with_tax - discount_value;
+    return total
+}
 
 form.addEventListener("submit",event=>{
 
@@ -65,83 +78,19 @@ form.addEventListener("submit",event=>{
     tax_value = calculate_taxes(totalPrice, percentage_tax.value);
     total_with_tax = totalPrice + tax_value;
     discount_value = calculate_discount(totalPrice, quantity.value);
-    total_with_discount = total_with_tax - discount_value;
+    total_with_discount = total_with_tax - discount_value ;
+    total_with_discount_1 = calcularTotal(quantity.value ,price.value,percentage_tax.value) ;
+
+    
 
     // show in page
     total_price.innerHTML = "Total price = " + totalPrice + "$";
     tax.innerHTML = "Tax = +" + tax_value + "$";
     discount.innerHTML = "Discount = -" + discount_value + "$";
     total_price_calculated.innerHTML = "Total to pay = " + total_with_discount + "$";
+    total_price_calculated_2.innerHTML = "Total to pay_1 = " + total_with_discount_1 + "$";
     if (discount_value != 0 ){
         alert( "Felicidades - Recibiste un descuentoo ¡¡ :D");
     }
 });
-
-/*
-function isAnIndex(index,lenght){
-    var ans = false;
-    if (index<lenght && index>0){
-        ans = true;
-    }
-    return ans;
-}
-
-function valueIntervalFinder(value,limits)
-{
-    var interval;
-    if (value<limits[0])
-    {
-        interval = 0
-    }
-    else if (value >limits[limits.length-1])
-    {
-        interval = limits.length
-    }
-    else
-    {
-        for(var i=0;i<limits.length;i=i+1)
-        {
-            if (limits[i]<=value && value<=limits[i+1])
-            {
-                interval = i + 1;
-            }
-        }
-    }
-    return interval;
-}
-function greetingSelector(name,age,gender){
-    var greetings = {
-        0:{
-            "male":"Hola amigo",
-            "female":"Hola amiga"
-        },
-        1:{
-            "male":"Que tal",
-            "female":"Que tal"
-        },
-        2:{
-            "male":"Como esta Don",
-            "female":"Como esta Sra."
-        }
-    }
-    var greetings_by_time = {
-        0:"Buen día",
-        1:"Buenas tardes",
-        2:"Buena noche"
-    }
-    var limits = [20,45]
-    group = valueIntervalFinder(age,limits);
-    var current_time = new Date(); 
-    var time_limits = [new Date().setHours(12,0),new Date().setHours(18,0)]
-    time_group = valueIntervalFinder(current_time,time_limits)
-    //alert(current_time)
-    return greetings[group][gender] + " " + name + ". "+greetings_by_time[time_group]+"."
-}
-
-form.addEventListener("submit",event=>{
-    event.preventDefault();
-    greeting_message = greetingSelector(nombre.value,edad.value,genero.value)
-    greeting_element.innerHTML = greeting_message;
-})
-*/
 
