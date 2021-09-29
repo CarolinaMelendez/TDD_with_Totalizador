@@ -24,8 +24,12 @@ describe("calcular total", () => {
 function calcularTotal(price,quantity,tax){
     sum_total_price = price*quantity;
     calculated_tax = sum_total_price * (tax/100);
-    total_witn_tax = sum_total_price + calculated_tax;
-    if (quantity >= 3000 ) return total_witn_tax - (sum_total_price*0.05)
-    if (quantity >= 1000 ) return total_witn_tax - (sum_total_price*0.03)
-    return total_witn_tax;
+    total_with_tax = sum_total_price + calculated_tax;
+    if (has_it_discount(quantity, 3000)) return total_with_tax - (sum_total_price*0.05)
+    if (has_it_discount(quantity, 1000)) return total_with_tax - (sum_total_price*0.03)
+    return total_with_tax;
+}
+
+function has_it_discount(quantity, minimum_quantity){
+    return quantity >= minimum_quantity
 }
