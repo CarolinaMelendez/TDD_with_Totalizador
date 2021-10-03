@@ -6,7 +6,7 @@ module.exports = {
 */
 
 export function calculateTotal(price,quantity,tax){
-
+    return  price*quantity;
 }
 
 

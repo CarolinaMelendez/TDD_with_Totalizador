@@ -1,1 +1,2 @@
-{}
+{"D:\\CARITO ---Trabajos\\4 Ingenieria de Software\\Tareas\\Tarea - Totalizador with TDD\\TotalizadorVentas\\src\\Functions.js": {"path":"D:\\CARITO ---Trabajos\\4 Ingenieria de Software\\Tareas\\Tarea - Totalizador with TDD\\TotalizadorVentas\\src\\Functions.js","statementMap":{"0":{"start":{"line":9,"column":4},"end":{"line":9,"column":27}}},"fnMap":{"0":{"name":"calculateTotal","decl":{"start":{"line":8,"column":16},"end":{"line":8,"column":30}},"loc":{"start":{"line":8,"column":50},"end":{"line":10,"column":1}},"line":8}},"branchMap":{},"s":{"0":2},"f":{"0":2},"b":{},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"6d6257e3da94996341115f75ffb0d9cce9d5792e"}
+}
