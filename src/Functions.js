@@ -1,6 +1,10 @@
 export function calculateTotal(price,quantity,state){
     let subTotal = quantity * price;
-    return  subTotal + (subTotal * taxState(state));
+    let discount = 0
+    if (quantity >=1000){
+        discount = subTotal * 0.03;
+    }
+    return  subTotal + (subTotal * taxState(state)) - discount;
 }
 
 function taxState(state){

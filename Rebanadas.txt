@@ -3,9 +3,8 @@ calcularTotal(cantidad, precio, estado)
 1.- calcular total (precio * cantidad)   OK
 2.- calcular total incluyendo un estado por defecto "CA"  OK
 3.- calcular total incluyendo más estados OK
-4.- calcular total para 1 descuento 
+4.- calcular total para 1 descuento  OK
 5.- calcular total para varios descuentos
-
 
 Descuentos:
 Total de la orden	Tasa descuento
@@ -15,7 +14,6 @@ Total de la orden	Tasa descuento
         	10000          	10%
         	30000          	15%
  
-
 Impuestos por estado:
 Estado		Tasa de Impuesto
         	UT               	6.65%
@@ -24,3 +22,7 @@ Estado		Tasa de Impuesto
         	AL                	4.00%
         	CA                	8.25%
  
+
+
+
+
