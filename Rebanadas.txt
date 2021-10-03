@@ -4,7 +4,7 @@ calcularTotal(cantidad, precio, estado)
 2.- calcular total incluyendo un estado por defecto "CA"  OK
 3.- calcular total incluyendo más estados OK
 4.- calcular total para 1 descuento  OK
-5.- calcular total para varios descuentos
+5.- calcular total para varios descuentos OK
 
 Descuentos:
 Total de la orden	Tasa descuento

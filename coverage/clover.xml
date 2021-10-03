@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1633233506709" clover="3.2.0">
-  <project timestamp="1633233506709" name="All files">
-    <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2" elements="11" coveredelements="11" complexity="0" loc="7" ncloc="7" packages="1" files="1" classes="1"/>
+<coverage generated="1633234956573" clover="3.2.0">
+  <project timestamp="1633234956573" name="All files">
+    <metrics statements="23" coveredstatements="23" conditionals="22" coveredconditionals="22" methods="3" coveredmethods="3" elements="48" coveredelements="48" complexity="0" loc="23" ncloc="23" packages="1" files="1" classes="1"/>
     <file name="Functions.js" path="D:\CARITO ---Trabajos\4 Ingenieria de Software\Tareas\Tarea - Totalizador with TDD\TotalizadorVentas\src\Functions.js">
-      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <line num="2" count="8" type="stmt"/>
-      <line num="3" count="8" type="stmt"/>
-      <line num="4" count="8" type="cond" truecount="2" falsecount="0"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="7" count="8" type="stmt"/>
-      <line num="11" count="8" type="stmt"/>
-      <line num="12" count="8" type="stmt"/>
+      <metrics statements="23" coveredstatements="23" conditionals="22" coveredconditionals="22" methods="3" coveredmethods="3"/>
+      <line num="2" count="12" type="stmt"/>
+      <line num="3" count="12" type="stmt"/>
+      <line num="4" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="5" count="5" type="stmt"/>
+      <line num="7" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="10" count="12" type="stmt"/>
+      <line num="14" count="12" type="stmt"/>
+      <line num="15" count="12" type="stmt"/>
+      <line num="20" count="12" type="cond" truecount="6" falsecount="0"/>
+      <line num="22" count="7" type="stmt"/>
+      <line num="23" count="7" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="37" count="1" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="40" count="12" type="stmt"/>
     </file>
   </project>
 </coverage>

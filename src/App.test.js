@@ -30,5 +30,17 @@ describe("-- Totalizer --", () => {
   it("Test 4.1 - calculate with one discount",() => {
     expect(calculateTotal(5,1000,"AL")).toEqual(5050);
   });
+  it("Test 5.1 - calculate with variety of discounts",() => {
+    expect(calculateTotal(5,3000,"AL")).toEqual(14850);
+  });
+  it("Test 5.2 - calculate with variety of discounts",() => {
+    expect(calculateTotal(5,7000,"AL")).toEqual(33950);
+  });
+  it("Test 5.3 - calculate with variety of discounts",() => {
+    expect(calculateTotal(5,10000,"AL")).toEqual(47000);
+  });
+  it("Test 5.4 - calculate with variety of discounts",() => {
+    expect(calculateTotal(5,30000,"AL")).toEqual(133500);
+  });
 });
 
