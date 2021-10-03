@@ -1,7 +1,7 @@
 calcularTotal(cantidad, precio, estado)
 
-1.- calcular total (precio * cantidad)   
-2.- calcular total incluyendo un estado por defecto "CA"  
+1.- calcular total (precio * cantidad)   OK
+2.- calcular total incluyendo un estado por defecto "CA"  OK
 3.- calcular total incluyendo más estados
 4.- calcular total para 1 descuento 
 5.- calcular total para varios descuentos

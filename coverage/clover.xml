@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1633231347393" clover="3.2.0">
-  <project timestamp="1633231347393" name="All files">
-    <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="2" coveredelements="2" complexity="0" loc="1" ncloc="1" packages="1" files="1" classes="1"/>
+<coverage generated="1633232222016" clover="3.2.0">
+  <project timestamp="1633232222016" name="All files">
+    <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1" elements="8" coveredelements="8" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
     <file name="Functions.js" path="D:\CARITO ---Trabajos\4 Ingenieria de Software\Tareas\Tarea - Totalizador with TDD\TotalizadorVentas\src\Functions.js">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="9" count="2" type="stmt"/>
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="9" count="4" type="stmt"/>
+      <line num="10" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
+      <line num="14" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>

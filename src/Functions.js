@@ -5,8 +5,13 @@ module.exports = {
 }
 */
 
-export function calculateTotal(price,quantity,tax){
-    return  price*quantity;
+export function calculateTotal(price,quantity,state){
+    let subTotal = quantity * price;
+    if(state == "CA" ){
+        let tax_CA = 0.0825;
+        return subTotal + (subTotal * tax_CA);
+    }
+    return  subTotal;
 }
 
 
