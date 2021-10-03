@@ -1,46 +1,9 @@
-/*
-module.exports = {
-    "calculate_taxes": calculate_taxes(total_price, percentage_taxes),
-    "calculate_discount":calculate_discount(total_price, quantity),
-}
-*/
-
 export function calculateTotal(price,quantity,state){
     let subTotal = quantity * price;
-    if(state == "CA" ){
-        let tax_CA = 0.0825;
-        return subTotal + (subTotal * tax_CA);
-    }
-    return  subTotal;
+    return  subTotal + (subTotal * taxState(state));
 }
 
-
-/*
-export function calcularTotal(price,quantity,tax){
-    let sum_total_price = price*quantity;
-    let calculated_tax = sum_total_price * (tax/100);
-    let total_with_tax = sum_total_price + calculated_tax;
-    if (has_it_discount(quantity, 3000)) return total_with_tax - (sum_total_price*0.05)
-    if (has_it_discount(quantity, 1000)) return total_with_tax - (sum_total_price*0.03)
-    return total_with_tax;
+function taxState(state){
+    let taxes = {"":0, "UT":0.0665,"NV":0.08,"TX":0.0625,"AL":0.04,"CA":0.0825 };
+    return taxes[state];
 }
-
-function has_it_discount(quantity, minimum_quantity){
-    return quantity >= minimum_quantity
-}
-*/
-
-/*
-
-function impuestoEstado(estado) {
-    let impuestos = { CA: 0.0825, UT: 0.0665, "": 0 };
-    return impuestos[estado];
-  }
-  
-  function calcularTotal(cantidad, precio, estado) {
-    let subTotal = cantidad * precio;
-    let impuesto = impuestoEstado(estado);
-    subTotal = subTotal + subTotal * impuesto;
-    return subTotal;
-  }
-  */
